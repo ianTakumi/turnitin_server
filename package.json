@@ -17,8 +17,16 @@
     "cors": "^2.8.5",
     "dotenv": "^17.2.2",
     "express": "^5.1.0",
+    "html-pdf-node": "^1.0.8",
+    "mammoth": "^1.11.0",
     "morgan": "^1.10.1",
     "multer": "^2.0.2",
-    "nodemonjs": "^1.0.0"
+    "nodemonjs": "^1.0.0",
+    "pdf-parse": "^2.1.7",
+    "pdfjs-dist": "^5.4.149",
+    "puppeteer": "^24.23.0",
+    "streamifier": "^0.1.1",
+    "textract": "^2.5.0",
+    "uuid": "^13.0.0"
   }
 }

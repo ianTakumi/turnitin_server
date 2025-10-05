@@ -4,32 +4,33 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const supabase = createClient(
-  process.env.SUPABASE_URL,
-  process.env.SUPABASE_API_KEY
+// Server-side Supabase client using SERVICE ROLE key
+export const supabaseAdmin = createClient(
+  process.env.SUPABASE_URL, // Supabase URL
+  process.env.SUPABASE_SERVICE_ROLE_KEY // Service Role Key (server-only)
 );
 
-// Login
-async function login(email, password) {
-  const { data, error } = await supabase.auth.signInWithPassword({
+// Example login function (optional)
+export async function login(email, password) {
+  const { data, error } = await supabaseAdmin.auth.signInWithPassword({
     email,
     password,
   });
 
   if (error) {
     console.error(error.message);
-    return;
+    return null;
   }
 
-  // JWT is inside data.session.access_token
   console.log("Logged in:", data);
+  return data;
 }
 
-// Logout
-async function logout() {
-  const { error } = await supabase.auth.signOut();
+// Example logout function (optional)
+export async function logout() {
+  const { error } = await supabaseAdmin.auth.signOut();
   if (error) console.error(error.message);
   else console.log("Logged out");
 }
 
-export default supabase;
+export default supabaseAdmin;
