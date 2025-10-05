@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.58.0",
+    "axios": "^1.12.2",
     "bcrypt": "^6.0.0",
     "cloudinary": "^2.7.0",
     "cors": "^2.8.5",
@@ -22,9 +23,12 @@
     "morgan": "^1.10.1",
     "multer": "^2.0.2",
     "nodemonjs": "^1.0.0",
+    "pdf-lib": "^1.17.1",
     "pdf-parse": "^2.1.7",
+    "pdf-poppler": "^0.2.3",
     "pdfjs-dist": "^5.4.149",
     "puppeteer": "^24.23.0",
+    "sharp": "^0.34.4",
     "streamifier": "^0.1.1",
     "textract": "^2.5.0",
     "uuid": "^13.0.0"
